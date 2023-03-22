@@ -8,10 +8,13 @@ from bs4 import BeautifulSoup
 
 # OpenAI credentials
 openai.api_key = "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"
-
+try:
+    G_SECRET = os.environ["G_SECRET"]
+except KeyError:
+    SOME_SECRET = "Token not available!"
 # Email credentials
 email_address = "erichgellert@gmail.com"
-email_password = "dmtrlmswlyrckaux"
+email_password = G_SECRET
 email_toaddress = "erich.gellert@microsoft.com"
 
 # RSS feed URL

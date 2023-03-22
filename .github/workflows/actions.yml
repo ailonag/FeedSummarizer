@@ -21,5 +21,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: execute py script # run main.py
-        run: python main.py
+      - name: execute py script # run gpt-summerizer.py
+        env:
+           G_SECRET: ${{ secrets.GMAIL }}
+        run: python gpt-summerizer.py
