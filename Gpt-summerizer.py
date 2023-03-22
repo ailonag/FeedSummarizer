@@ -10,9 +10,9 @@ from bs4 import BeautifulSoup
 openai.api_key = "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"
 
 # Email credentials
-email_address = "ailona@ailona.com"
-email_password = "J@ckL0rdistough"
-email_toaddress = "erichgellert@gmail.com"
+email_address = "erichgellert@gmail.com"
+email_password = "dmtrlmswlyrckaux"
+email_toaddress = "erich.gellert@microsoft.com"
 
 # RSS feed URL
 feed_url = "https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=-2665027495767423092&board=MicrosoftEndpointManagerBlog&size=25"
@@ -52,7 +52,7 @@ with open("lastpost.txt", "r+") as file:
         
 
         # Send email
-        with smtplib.SMTP("10.0.0.67", 587) as server:
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(email_address, email_password)
             server.sendmail(email_address, email_toaddress, message.as_string())
