@@ -29,6 +29,7 @@ jobs:
         env:
           G_SECRET: ${{ secrets.GMAIL}}
           OPENAI_SECRET: ${{ secrets.OPENAI}}
+          Url_Variable: ${{ variable.FEEDURL}}
         run: python main.py
 
       - name: commit files

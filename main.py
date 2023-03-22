@@ -15,7 +15,12 @@ try:
     O_SECRET = os.environ["OPENAI_SECRET"]
 except KeyError:
     O_SECRET = "Token not available!"
+try:
+    FEED_URL = os.environ["Url_Variable"]
+except KeyError:
+    FEED_URL = "Token not available!"
 
+Url_Variable
 # OpenAI credentials
 openai.api_key = O_SECRET
 
@@ -25,7 +30,7 @@ email_password = G_SECRET
 email_toaddress = "erich.gellert@microsoft.com"
 
 # RSS feed URL
-feed_url = "https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/custom-blog-rss?tid=-2665027495767423092&board=MicrosoftEndpointManagerBlog&size=25"
+feed_url = FEED_URL
 
 # Check for new posts
 feed = feedparser.parse(feed_url)
