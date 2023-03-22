@@ -12,7 +12,7 @@ try:
 except KeyError:
     G_SECRET = "Token not available!"
 try:
-    O_SECRET = OS.EVNIRON["OPENAI_SECRET"]
+    O_SECRET = os.environ["OPENAI_SECRET"]
 except KeyError:
     O_SECRET = "Token not available!"
 
