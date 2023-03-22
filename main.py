@@ -9,9 +9,12 @@ from bs4 import BeautifulSoup
 
 try:
     G_SECRET = os.environ["G_SECRET"]
+except KeyError:
+    G_SECRET = "Token not available!"
+try:
     O_SECRET = OS.EVNIRON["OPENAI_SECRET"]
 except KeyError:
-    SOME_SECRET = "Token not available!"
+    O_SECRET = "Token not available!"
 
 # OpenAI credentials
 openai.api_key = O_SECRET
