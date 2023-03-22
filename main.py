@@ -30,7 +30,7 @@ feed_url = "https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/cu
 # Check for new posts
 feed = feedparser.parse(feed_url)
 latest_post = feed.entries[4]
-with open("latestpost.txt", "r+") as file:
+with open("lastpost.txt") as file:
     latest_post_saved = file.read()
     if latest_post_saved != latest_post.link:
         # Extract text from new post link using Beautiful Soup
