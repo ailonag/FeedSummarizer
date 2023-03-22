@@ -16,8 +16,6 @@ try:
 except KeyError:
     O_SECRET = "Token not available!"
 
-
-Url_Variable
 # OpenAI credentials
 openai.api_key = O_SECRET
 
