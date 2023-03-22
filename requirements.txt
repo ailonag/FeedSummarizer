@@ -1,0 +1,6 @@
+feedparser
+os
+requests
+openai
+smtplibMIMEText
+BeautifulSoup4
