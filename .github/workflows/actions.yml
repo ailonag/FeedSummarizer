@@ -1,8 +1,8 @@
 name: run Feed summarizer
 
 on:
-  #schedule:
-    #- cron: '5 * * * *' # At 00:00 on Monday
+  schedule:
+    - cron: '5 * * * *' # At 00:00 on Monday
 
   push:
     branches: [ "main" ]
